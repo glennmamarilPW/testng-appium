@@ -37,11 +37,9 @@ public class Trial extends TestBase {
 	
 	@Test
 	public void sampleTest() throws InterruptedException {
-		driver.findElement(By.id("com.android.calculator2:id/digit_1")).click();
-		//calculator.clickNumber("1");
+		calculator.clickNumber("1");
 		driver.findElement(By.id("com.android.calculator2:id/op_add")).click();
-		driver.findElement(By.id("com.android.calculator2:id/digit_2")).click();
-		//calculator.clickNumber("2");
+		calculator.clickNumber("2");
 		driver.findElement(By.id("com.android.calculator2:id/eq")).click();
 		Thread.sleep(3000);
 		

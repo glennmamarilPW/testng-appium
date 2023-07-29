@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-27T14:44:13 SGT" name="Default suite" finished-at="2023-06-27T14:44:30 SGT" duration-ms="16724">
+  <suite started-at="2023-07-28T17:29:10 SGT" name="Default suite" finished-at="2023-07-28T17:29:23 SGT" duration-ms="12433">
     <groups>
     </groups>
-    <test started-at="2023-06-27T14:44:13 SGT" name="Default test" finished-at="2023-06-27T14:44:30 SGT" duration-ms="16724">
+    <test started-at="2023-07-28T17:29:10 SGT" name="Default test" finished-at="2023-07-28T17:29:23 SGT" duration-ms="12433">
       <class name="test.Trial">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Trial@235ecd9f]" started-at="2023-06-27T14:44:13 SGT" name="setup" finished-at="2023-06-27T14:44:23 SGT" duration-ms="10463" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.Trial@235ecd9f]" started-at="2023-07-28T17:29:10 SGT" name="setup" finished-at="2023-07-28T17:29:17 SGT" duration-ms="6226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="sampleTest()[pri:0, instance:test.Trial@235ecd9f]" started-at="2023-06-27T14:44:23 SGT" name="sampleTest" finished-at="2023-06-27T14:44:29 SGT" duration-ms="5746" status="PASS">
+        <test-method signature="sampleTest()[pri:0, instance:test.Trial@235ecd9f]" started-at="2023-07-28T17:29:17 SGT" name="sampleTest" finished-at="2023-07-28T17:29:23 SGT" duration-ms="5938" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Trial@235ecd9f]" started-at="2023-06-27T14:44:29 SGT" name="teardown" finished-at="2023-06-27T14:44:30 SGT" duration-ms="460" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Trial@235ecd9f]" started-at="2023-07-28T17:29:23 SGT" name="teardown" finished-at="2023-07-28T17:29:23 SGT" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

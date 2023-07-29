@@ -6,13 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import base.TestBase;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import utilities.UserHelper;
 //import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class Calculator extends UserHelper {
-	WebDriver driver;
+public class Calculator extends TestBase{
+	public AppiumDriver driver;
 	/*----------Toolbar----------*/
 //	@AndroidFindBy(xpath="//android.widget.ImageButton[@content-desc=\"More options\"]")
 //	private static WebElement options;
@@ -59,6 +60,7 @@ public class Calculator extends UserHelper {
 	private static WebElement advancedOperations;
 //	
 	public Calculator(AppiumDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -66,5 +68,22 @@ public class Calculator extends UserHelper {
 		WebElement numberElement = driver.findElement(By.id("com.android.calculator2:id/digit_"+number));
 		numberElement.click();
 		//reportPass(Thread.currentThread().getStackTrace()[1].getMethodName(), "Entered a number");
+	}
+	
+	public void Operation(String expression) {
+		switch(expression) {
+		case "+":
+			add.click();
+			break;
+		case "-":
+			subtract.click();
+			break;
+		case "*":
+			multiply.click();
+			break;
+		case "/":
+			divide.click();
+			break;
+		}
 	}
 }
