@@ -60,7 +60,50 @@ public class Calculator extends TestBase{
 	private static WebElement advancedOperations;
 	
 	/*----------Advanced Functions----------*/
+	@FindBy(id="com.android.calculator2:id/toggle_inv")
+	private static WebElement inv;
 	
+	@FindBy(id="com.android.calculator2:id/toggle_mode")
+	private static WebElement angleMode;
+	
+	@FindBy(id="com.android.calculator2:id/op_pct")
+	private static WebElement percent;
+	
+	@FindBy(id="com.android.calculator2:id/fun_sin")
+	private static WebElement trigSine;
+	
+	@FindBy(id="com.android.calculator2:id/fun_cos")
+	private static WebElement trigCosine;
+	
+	@FindBy(id="com.android.calculator2:id/fun_tan")
+	private static WebElement tigTangent;
+	
+	@FindBy(id="com.android.calculator2:id/fun_ln")
+	private static WebElement naturalLogarithm;
+	
+	@FindBy(id="com.android.calculator2:id/fun_log")
+	private static WebElement logarithm;
+	
+	@FindBy(id="com.android.calculator2:id/op_fact")
+	private static WebElement factorial;
+	
+	@FindBy(id="com.android.calculator2:id/const_pi")
+	private static WebElement pi;
+	
+	@FindBy(id="com.android.calculator2:id/const_e")
+	private static WebElement eulerNumber;
+	
+	@FindBy(id="com.android.calculator2:id/op_pow")
+	private static WebElement power;
+	
+	@FindBy(id="com.android.calculator2:id/lparen")
+	private static WebElement leftParenthesis;
+	
+	@FindBy(id="com.android.calculator2:id/rparen")
+	private static WebElement rightParethesis;
+	
+	@FindBy(id="com.android.calculator2:id/op_sqrt")
+	private static WebElement squareRoot;
 	
 	public Calculator(AppiumDriver driver) {
 		this.driver = driver;
