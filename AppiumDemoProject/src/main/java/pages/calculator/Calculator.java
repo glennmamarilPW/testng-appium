@@ -58,32 +58,69 @@ public class Calculator extends TestBase{
 	
 	@FindBy(id="com.android.calculator2:id/pad_advanced")
 	private static WebElement advancedOperations;
-//	
+	
+	/*----------Advanced Functions----------*/
+	
+	
 	public Calculator(AppiumDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickNumber(String number) {
+//	public Calculator() {
+//		PageFactory.initElements(driver, this);
+//	}
+	
+	public void parseExpression(String expression) {
+		int index=0;
+		char character;
+		do {
+			character = expression.charAt(index);
+			System.out.println(character);
+			if(Character.isDigit(character)) {
+				clickNumber(character);
+			}else {
+				operation(character);
+			}
+			index++;
+		}while(index!=expression.length());
+		
+		
+	}
+	
+	public void clickNumber(char number) {
 		WebElement numberElement = driver.findElement(By.id("com.android.calculator2:id/digit_"+number));
 		numberElement.click();
 		//reportPass(Thread.currentThread().getStackTrace()[1].getMethodName(), "Entered a number");
 	}
 	
-	public void Operation(String expression) {
+	public void operation(char expression) {
 		switch(expression) {
-		case "+":
+		case '+':
 			add.click();
 			break;
-		case "-":
+		case '-':
 			subtract.click();
 			break;
-		case "*":
+		case '*':
 			multiply.click();
 			break;
-		case "/":
+		case '/':
 			divide.click();
 			break;
+		case '=':
+			equal.click();
+			break;
+		default:
+			throw new Error("Character not valid!");	
 		}
+	}
+	
+	public boolean verifyResult() {
+		boolean isResultShown = !(result.getText()).isEmpty();
+		if(isResultShown) {
+			System.out.println(result.getText());
+		}
+		return isResultShown;
 	}
 }

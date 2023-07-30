@@ -11,8 +11,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
 
 import io.appium.java_client.AppiumDriver;
+import pages.calculator.Calculator;
 
 public class TestBase {
 
@@ -36,7 +39,8 @@ public class TestBase {
 		
 		public AppiumDriver initializeDriver() {
 			try {
-				appiumURL = new URL("http://"+appiumServer+":"+appiumPort+"/wd/hub");
+				//appiumURL = new URL("http://"+appiumServer+":"+appiumPort+"/wd/hub"); //for appium 1.2 and lower
+				appiumURL = new URL("http://"+appiumServer+":"+appiumPort); //for appium 2.0 onwards
 				this.mobileDriver = new AppiumDriver(appiumURL,setAppCapabilities());
 			}catch(Exception e){
 				e.printStackTrace();
@@ -62,5 +66,22 @@ public class TestBase {
 			String destinationFile = System.getProperty("user.dir")+"/reports/"+testCaseName+".png";
 			FileUtils.copyFile(source, new File(destinationFile));
 			return destinationFile;
+		}
+		
+//		@BeforeTest
+//		public void setup() {
+//			try {
+//				mobileDriver = initializeDriver();
+//				//calculator = new Calculator(mobileDriver);
+//			}catch(Exception exp) {
+//				System.out.println("Cause is: "+exp.getCause());
+//				System.out.println("Message is: "+exp.getMessage());
+//				exp.printStackTrace();
+//			}
+//		}
+		
+		@AfterClass(alwaysRun=true)
+		public void tearDown() {
+			mobileDriver.quit();
 		}
 }

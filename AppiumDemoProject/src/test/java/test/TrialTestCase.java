@@ -5,6 +5,7 @@ import java.net.URL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -15,38 +16,34 @@ import pages.calculator.Calculator;
 import base.BaseClass;
 import base.TestBase;
 
-public class Trial extends TestBase {
+public class TrialTestCase extends TestBase {
 	
-	AppiumDriver driver;
+	AppiumDriver mobileDriver;
 	Calculator calculator;
 	
 	@BeforeTest
 	public void setup() {
 		try {
-			
-			driver = initializeDriver();
-			calculator = new Calculator(driver);
-			//PageFactory.initElements(new AppiumFieldDecorator(driver), Calculator.class);
-			//PageFactory.initElements(getDriver(), Calculator.class);
+			mobileDriver = initializeDriver();
+			calculator = new Calculator(mobileDriver);
 		}catch(Exception exp) {
 			System.out.println("Cause is: "+exp.getCause());
 			System.out.println("Message is: "+exp.getMessage());
 			exp.printStackTrace();
 		}
 	}
+//	private void initialize() {
+//		calculator = new Calculator(mobileDriver);
+//	}
 	
 	@Test
 	public void sampleTest() throws InterruptedException {
-		calculator.clickNumber("1");
-		driver.findElement(By.id("com.android.calculator2:id/op_add")).click();
-		calculator.clickNumber("2");
-		driver.findElement(By.id("com.android.calculator2:id/eq")).click();
+		//initialize();
+		String expression = "1+2=";
+		calculator.parseExpression(expression);
+		Assert.assertTrue(calculator.verifyResult(), "Result not the same!");
 		Thread.sleep(3000);
 		
 	}
 	
-	@AfterTest
-	public void teardown() {
-		driver.quit();
-	}
 }

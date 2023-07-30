@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "caps": [
+    {
+      "type": "text",
+      "name": "platformName",
+      "value": "Android"
+    },
+    {
+      "type": "text",
+      "name": "appium:platformVersion",
+      "value": "8.0"
+    },
+    {
+      "type": "text",
+      "name": "appium:deviceName",
+      "value": "emulator-5554"
+    },
+    {
+      "type": "text",
+      "name": "appium:appPackage",
+      "value": "com.android.calculator2"
+    },
+    {
+      "type": "text",
+      "name": "appium:automationName",
+      "value": "UIAutomator2"
+    },
+    {
+      "type": "text",
+      "name": "appium:appActivity",
+      "value": "com.android.calculator2.Calculator"
+    }
+  ],
+  "server": {
+    "local": {},
+    "remote": {
+      "hostname": "localhost",
+      "port": "4723"
+    },
+    "sauce": {
+      "dataCenter": "us-west-1"
+    },
+    "headspin": {},
+    "browserstack": {},
+    "lambdatest": {},
+    "advanced": {},
+    "bitbar": {},
+    "kobiton": {},
+    "perfecto": {},
+    "pcloudy": {},
+    "testingbot": {},
+    "experitest": {},
+    "roboticmobi": {},
+    "remotetestkit": {}
+  },
+  "serverType": "remote",
+  "visibleProviders": []
+}
