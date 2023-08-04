@@ -24,12 +24,7 @@ public class BaseClass {
 	public WebDriver getDriver() {
         //Get driver from ThreadLocalMap
         return driver.get();
-    }
-	
-//	public void setBrowserZoom() {
-//		JavascriptExecutor jse = (JavascriptExecutor)getDriver();
-//		jse.executeScript("document.body.style.zoom = '100%';");
-//	}
+    }	
 
 	@Parameters({"categoryXML", "browser", "url", "td"})//These parameters can be configured in testng_Agile.xml
 //	@BeforeClass

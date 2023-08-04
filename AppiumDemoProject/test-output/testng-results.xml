@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-30T16:45:35 PST" name="Default suite" finished-at="2023-07-30T16:45:51 PST" duration-ms="15989">
+  <suite started-at="2023-08-04T08:18:16 SGT" name="Default suite" finished-at="2023-08-04T08:18:54 SGT" duration-ms="37976">
     <groups>
     </groups>
-    <test started-at="2023-07-30T16:45:35 PST" name="Default test" finished-at="2023-07-30T16:45:51 PST" duration-ms="15989">
+    <test started-at="2023-08-04T08:18:16 SGT" name="Default test" finished-at="2023-08-04T08:18:54 SGT" duration-ms="37976">
       <class name="test.TrialTestCase">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.TrialTestCase@2a8448fa]" started-at="2023-07-30T16:45:35 PST" name="setup" finished-at="2023-07-30T16:45:44 PST" duration-ms="8633" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.TrialTestCase@1ca3b418]" started-at="2023-08-04T08:18:16 SGT" name="setup" finished-at="2023-08-04T08:18:46 SGT" duration-ms="30475" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="sampleTest()[pri:0, instance:test.TrialTestCase@2a8448fa]" started-at="2023-07-30T16:45:44 PST" name="sampleTest" finished-at="2023-07-30T16:45:51 PST" duration-ms="7224" status="PASS">
+        <test-method signature="sampleTest()[pri:0, instance:test.TrialTestCase@1ca3b418]" started-at="2023-08-04T08:18:46 SGT" name="sampleTest" finished-at="2023-08-04T08:18:54 SGT" duration-ms="7214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sampleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TrialTestCase@2a8448fa]" started-at="2023-07-30T16:45:51 PST" name="tearDown" finished-at="2023-07-30T16:45:51 PST" duration-ms="110" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TrialTestCase@1ca3b418]" started-at="2023-08-04T08:18:54 SGT" name="tearDown" finished-at="2023-08-04T08:18:54 SGT" duration-ms="243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

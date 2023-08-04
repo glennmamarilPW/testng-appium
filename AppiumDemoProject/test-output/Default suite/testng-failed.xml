@@ -6,8 +6,8 @@
       <class name="test.TrialTestCase">
         <methods>
           <include name="tearDown"/>
-          <include name="setup"/>
           <include name="sampleTest"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- test.TrialTestCase -->
     </classes>

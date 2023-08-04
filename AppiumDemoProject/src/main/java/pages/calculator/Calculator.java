@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import base.TestBase;
+import base.BaseClassMobile;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import utilities.UserHelper;
 //import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class Calculator extends TestBase{
+public class Calculator extends BaseClassMobile{
 	public AppiumDriver driver;
 	/*----------Toolbar----------*/
 //	@AndroidFindBy(xpath="//android.widget.ImageButton[@content-desc=\"More options\"]")

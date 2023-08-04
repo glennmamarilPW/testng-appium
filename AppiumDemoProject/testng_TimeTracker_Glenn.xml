@@ -10,7 +10,7 @@
 		<parameter name="url" value = "http://timetracker21.srv.pointwest.com.ph/"/>
 		<parameter name="td" value="\testData\timetracker_glenn_v2.xlsx"/>
     	<classes>
-			<class name="test.Trial" />
+			<class name="test.TrialTestCase" />
  		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

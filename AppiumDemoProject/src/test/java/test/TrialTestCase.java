@@ -13,37 +13,25 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import pages.calculator.Calculator;
-import base.BaseClass;
-import base.TestBase;
+import base.BaseClassMobile;
 
-public class TrialTestCase extends TestBase {
+public class TrialTestCase extends BaseClassMobile {
 	
 	AppiumDriver mobileDriver;
 	Calculator calculator;
 	
-	@BeforeTest
-	public void setup() {
-		try {
-			mobileDriver = initializeDriver();
-			calculator = new Calculator(mobileDriver);
-		}catch(Exception exp) {
-			System.out.println("Cause is: "+exp.getCause());
-			System.out.println("Message is: "+exp.getMessage());
-			exp.printStackTrace();
-		}
+	private void initialize() {
+		mobileDriver = getMobileDriver();
+		calculator = new Calculator(mobileDriver);
 	}
-//	private void initialize() {
-//		calculator = new Calculator(mobileDriver);
-//	}
 	
 	@Test
 	public void sampleTest() throws InterruptedException {
-		//initialize();
+		initialize();
 		String expression = "1+2=";
 		calculator.parseExpression(expression);
 		Assert.assertTrue(calculator.verifyResult(), "Result not the same!");
 		Thread.sleep(3000);
-		
 	}
 	
 }

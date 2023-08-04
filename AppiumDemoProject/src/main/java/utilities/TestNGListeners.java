@@ -18,8 +18,9 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import base.BaseClass;
+import base.BaseClassMobile;
 
-public class TestNGListeners extends BaseClass implements ITestListener {
+public class TestNGListeners extends BaseClassMobile implements ITestListener {
 	ExtentReporterManager ermObj = new ExtentReporterManager();
 	ExtentTest parentTest;
 	ExtentTest childTest;
@@ -53,7 +54,8 @@ public class TestNGListeners extends BaseClass implements ITestListener {
 	public synchronized void onTestFailure(ITestResult result) {
 		String testMethodName = result.getMethod().getMethodName();
 		SrcBase64String = "";
-		String SrcBase64 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
+		//String SrcBase64 = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BASE64);
+		String SrcBase64 = ((TakesScreenshot) getMobileDriver()).getScreenshotAs(OutputType.BASE64);
 		SrcBase64String = SrcBase64;
 
 		// copies screenshot to destLoc
